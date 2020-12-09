@@ -1,0 +1,24 @@
+## Simple HelloWorld REST api with Fuse 7.7
+The projects build executable Spring Boot fat jar and also can be run in OpenShift.
+
+### Build and run locally 
+The Red Hat maven repos are configured in pom.xml.
+Run locally:
+
+  mvn clean install
+  java -jar target/fuse7-hello-1.0-SNAPSHOT.jar
+
+Or with spring-boot-maven-plugin:
+
+  mvn clean spring-boot:run
+
+Try:
+
+  curl -k http://localhost:8080/api/hello
+  curl -k http://localhost:8080/api/hello/MyName
+
+### Documentation
+
+ - Fuse on Openshift: https://access.redhat.com/documentation/en-us/red_hat_fuse/7.7/html-single/fuse_on_openshift_guide/
+ - All Fuse docs: https://access.redhat.com/documentation/en-us/red_hat_fuse/7.7/
+ - SpringBoot: https://docs.spring.io/spring-boot/docs/2.1.6.RELEASE/reference/htmlsingle/
