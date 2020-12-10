@@ -1,12 +1,15 @@
-## Simple HelloWorld REST api with Fuse 7.7
+## Springboot with Camel example REST api
 The projects build executable Spring Boot fat jar and also can be run in OpenShift.
+
+Additional location for _application.properties_ (or _application.yaml_) is also set to _/etc/files_ directory (`spring.config.additional-location=/etc/files/`). This location can be used as a mount point in the the container.
+
 
 ### Build and run locally 
 The Red Hat maven repos are configured in pom.xml.
 Run locally:
 
   mvn clean install
-  java -jar target/fuse7-hello-1.0-SNAPSHOT.jar
+  java -jar target/springboot-camel-example-1.0-SNAPSHOT.jar
 
 Or with spring-boot-maven-plugin:
 
